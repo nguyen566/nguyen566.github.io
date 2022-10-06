@@ -4,10 +4,11 @@ import {
 	Menu,
 	MenuButton,
 	Text,
-	Link,
+	// Link
 } from "@chakra-ui/react";
 import React from "react";
 import { IconType } from "react-icons";
+import { Link } from "react-scroll";
 
 interface NavItemProps {
 	navSize: String;
@@ -22,7 +23,7 @@ const NavItem: React.FC<NavItemProps> = ({
 	title,
 	icon,
 	active,
-	location
+	location,
 }) => {
 	return (
 		<Flex
@@ -33,21 +34,26 @@ const NavItem: React.FC<NavItemProps> = ({
 		>
 			<Menu placement="right">
 				<Link
-					backgroundColor={active && "#AEC8CA"}
-					p={3}
-					borderRadius={8}
-					_hover={{ textDecor: "none", backgroundColor: "#AEC8CA" }}
-					w={navSize == "large" ? "100%" : undefined}
-					href={location}
+					to={location}
+					activeClass="active"
+					spy={true}
+					smooth={true}
+					duration={500}
+					className="testButton"
+					width={navSize == "large" ? "100%" : undefined}
 				>
 					<MenuButton w={"100%"}>
 						<Flex>
 							<Icon
 								as={icon}
 								fontSize="xl"
-								color={active ? "#82aaad" : "gray.500"}
+								color={active ? "#afdfe3" : "gray.500"}
 							/>
-							<Text ml={5} display={navSize == "small" ? "none" : "flex"}>
+							<Text
+								ml={5}
+								display={navSize == "small" ? "none" : "flex"}
+								color={active ? "#afdfe3" : "gray.500"}
+							>
 								{title}
 							</Text>
 						</Flex>

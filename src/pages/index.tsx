@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 
 const Home: NextPage = ({}) => {
 	return (
-		<Flex>
+		<Flex style={{scrollBehavior:'smooth'}}>
 			<SideBar />
 			<Flex flexDir={"column"} w={"100%"} ml={5}>
 				<div id="aboutme" className="center-screen">

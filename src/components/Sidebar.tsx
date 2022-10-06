@@ -75,35 +75,35 @@ const SideBar = () => {
 					icon={SiAboutdotme}
 					title="About"
 					active={scrollY < 500 ? true : false}
-					location="#aboutme"
+					location="aboutme"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineDescription}
 					title="Experience"
-					active={scrollY >= 500 && scrollY < 2160 ? true : false}
-					location="#experience"
+					active={scrollY >= 500 && scrollY < 2046.4000244140625 ? true : false}
+					location="experience"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineSchool}
 					title="Education"
-					active={scrollY >= 2160 && scrollY < 2496 ? true : false}
-					location="#education"
+					active={scrollY >= 2046.4000244140625 && scrollY < 2380 ? true : false}
+					location="education"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={FiStar}
 					title="Projects"
-					active={scrollY >= 2496 && scrollY < 2880 ? true : false}
-					location="#projects"
+					active={scrollY >= 2380 && scrollY < 2880 ? true : false}
+					location="projects"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={GiSkills}
 					title="Skills"
 					active={scrollY >= 2880 ? true : false}
-					location="#skills"
+					location="skills"
 				/>
 			</Flex>
 
