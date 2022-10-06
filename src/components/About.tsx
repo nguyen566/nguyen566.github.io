@@ -23,8 +23,8 @@ const About = () => {
 			<Text fontSize="lg" mb={10}>
 				{about[0].description}
 			</Text>
-            <Text fontSize="lg" mb={10}>
-				Insert Link to Resume as PDF
+            <Text fontSize="lg" mb={10} color='blue'>
+				<Link href={'Randy_Nguyen_Resume.pdf'}>View Resume as PDF</Link>
 			</Text>
 			<Flex flexDir={"row"} mt={10} justifyContent=''>
 				<Link href={about[0].linkedin}>
