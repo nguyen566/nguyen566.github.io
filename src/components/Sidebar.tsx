@@ -1,23 +1,41 @@
 import {
 	Avatar,
+	Button,
 	Divider,
 	Flex,
 	Heading,
 	IconButton,
 	Text,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FiMenu, FiStar } from "react-icons/fi";
 import { MdOutlineSchool, MdOutlineDescription } from "react-icons/md";
 import { SiAboutdotme } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
 import NavItem from "./Navitem";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const SideBar = () => {
 	const [navSize, setNavSize] = useState("large");
-	const router = useRouter();
+	const [scrollY, setScrollY] = useState(0);
+
+	useEffect(() => {
+		const handleScroll = () => {
+			setScrollY(window.scrollY);
+		};
+
+		// just trigger this so that the initial state
+		// is updated as soon as the component is mounted
+		// related: https://stackoverflow.com/a/63408216
+		handleScroll();
+
+		window.addEventListener("scroll", handleScroll);
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	return (
 		<Flex
@@ -56,35 +74,35 @@ const SideBar = () => {
 					navSize={navSize}
 					icon={SiAboutdotme}
 					title="About"
-					active={false}
+					active={scrollY < 500 ? true : false}
 					location="#aboutme"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineDescription}
 					title="Experience"
-					active={false}
+					active={scrollY >= 500 && scrollY < 2160 ? true : false}
 					location="#experience"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineSchool}
 					title="Education"
-					active={false}
+					active={scrollY >= 2160 && scrollY < 2496 ? true : false}
 					location="#education"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={FiStar}
 					title="Projects"
-					active={false}
+					active={scrollY >= 2496 && scrollY < 2880 ? true : false}
 					location="#projects"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={GiSkills}
 					title="Skills"
-					active={false}
+					active={scrollY >= 2880 ? true : false}
 					location="#skills"
 				/>
 			</Flex>
@@ -100,7 +118,9 @@ const SideBar = () => {
 			<Divider display={navSize == "small" ? "none" : "200px"} />
 
 			<Flex mt={4} align="center">
-				<Avatar size="sm" src="personal_photo.png" ml={2} mb={2} />
+				<Link href={"/"}>
+					<Avatar size="sm" src="personal_photo.png" ml={2} mb={2} />
+				</Link>
 				<Flex
 					direction={"column"}
 					ml={4}

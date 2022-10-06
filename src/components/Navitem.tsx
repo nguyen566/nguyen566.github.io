@@ -5,7 +5,6 @@ import {
 	MenuButton,
 	Text,
 	Link,
-	MenuList,
 } from "@chakra-ui/react";
 import React from "react";
 import { IconType } from "react-icons";
@@ -23,7 +22,7 @@ const NavItem: React.FC<NavItemProps> = ({
 	title,
 	icon,
 	active,
-	location,
+	location
 }) => {
 	return (
 		<Flex
@@ -34,7 +33,7 @@ const NavItem: React.FC<NavItemProps> = ({
 		>
 			<Menu placement="right">
 				<Link
-					backgroundColor={active && "AEC8CA"}
+					backgroundColor={active && "#AEC8CA"}
 					p={3}
 					borderRadius={8}
 					_hover={{ textDecor: "none", backgroundColor: "#AEC8CA" }}
