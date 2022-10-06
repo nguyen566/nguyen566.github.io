@@ -1,0 +1,13 @@
+.center-screen {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	min-height: 100vh;
+	height: 100%;
+    padding-top: 20px;
+}
+
+.section {
+    height: 100%;
+    padding-top: 20px;
+}
