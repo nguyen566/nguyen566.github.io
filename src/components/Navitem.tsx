@@ -4,6 +4,7 @@ import {
 	Menu,
 	MenuButton,
 	Text,
+	useColorModeValue,
 	// Link
 } from "@chakra-ui/react";
 import React from "react";
@@ -25,6 +26,9 @@ const NavItem: React.FC<NavItemProps> = ({
 	active,
 	location,
 }) => {
+	const navTextColor = useColorModeValue('white', 'gray.100');
+	const navActiveColor = useColorModeValue('cyan.300', 'orange.400')
+
 	return (
 		<Flex
 			mt={30}
@@ -47,12 +51,12 @@ const NavItem: React.FC<NavItemProps> = ({
 							<Icon
 								as={icon}
 								fontSize="xl"
-								color={active ? "#afdfe3" : "gray.500"}
+								color={active ? navActiveColor : navTextColor}
 							/>
 							<Text
 								ml={5}
 								display={navSize == "small" ? "none" : "flex"}
-								color={active ? "#afdfe3" : "gray.500"}
+								color={active ? navActiveColor : navTextColor}
 							>
 								{title}
 							</Text>

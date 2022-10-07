@@ -1,4 +1,4 @@
-import { Flex, Heading, IconButton, Text } from "@chakra-ui/react";
+import { color, Flex, Heading, IconButton, Text, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 import { about } from "../utils/about";
 import { SocialIcon } from "react-social-icons";
@@ -47,7 +47,7 @@ const About = () => {
 							<SocialIcon
 								url="https://github.com/in/jaketrent"
 								style={{ height: 60, width: 60 }}
-                                bgColor='ghostwhite'
+                                bgColor='gray'
 							/>
 						}
 						borderRadius={"50%"}

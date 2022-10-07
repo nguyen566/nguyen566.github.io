@@ -1,11 +1,12 @@
 import {
 	Avatar,
-	Button,
 	Divider,
 	Flex,
 	Heading,
 	IconButton,
 	Text,
+	useColorMode,
+	useColorModeValue,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { FiMenu, FiStar } from "react-icons/fi";
@@ -14,10 +15,16 @@ import { SiAboutdotme } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
 import NavItem from "./Navitem";
 import Link from "next/link";
+import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 const SideBar = () => {
 	const [navSize, setNavSize] = useState("large");
 	const [scrollY, setScrollY] = useState(0);
+	const { colorMode, toggleColorMode } = useColorMode();
+
+	const navBgColor = useColorModeValue("blue.600", "gray.700");
+	const navTextColor = useColorModeValue("white", "gray.100");
+	const themeBgColor = useColorModeValue("blue.500", "gray.600");
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -39,16 +46,15 @@ const SideBar = () => {
 
 	return (
 		<Flex
-			left="1"
+			left="0"
 			position="sticky"
 			top={0}
-			h="95vh"
-			mt={5}
+			h="100vh"
 			boxShadow={"0px 0px 2px black"}
-			// borderRadius={navSize == "small" ? "15px" : "30px"}
 			w={navSize == "small" ? "75px" : "200px"}
 			flexDir="column"
 			justifyContent="space-between"
+			bgColor={navBgColor}
 		>
 			<Flex
 				p={"5%"}
@@ -57,11 +63,27 @@ const SideBar = () => {
 				as="nav"
 			>
 				<IconButton
+					aria-label="Toggle Theme"
+					icon={
+						colorMode == "light" ? (
+							<MoonIcon color={"blue.900"} />
+						) : (
+							<SunIcon color={"orange.400"} />
+						)
+					}
+					onClick={toggleColorMode}
+					mt={2}
+					w={navSize == "small" ? "50%" : "100%"}
+					bgColor={themeBgColor}
+				/>
+				<IconButton
 					aria-label="Icon Button"
 					background={"none"}
 					mt={5}
 					_hover={{ background: "none" }}
 					icon={<FiMenu />}
+					color={navTextColor}
+					w={navSize == "small" ? "50%" : "100%"}
 					onClick={() => {
 						if (navSize == "small") {
 							setNavSize("large");
@@ -88,14 +110,16 @@ const SideBar = () => {
 					navSize={navSize}
 					icon={MdOutlineSchool}
 					title="Education"
-					active={scrollY >= 2046.4000244140625 && scrollY < 2380 ? true : false}
+					active={
+						scrollY >= 2046.4000244140625 && scrollY < 2480 ? true : false
+					}
 					location="education"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={FiStar}
 					title="Projects"
-					active={scrollY >= 2380 && scrollY < 2880 ? true : false}
+					active={scrollY >= 2480 && scrollY < 2880 ? true : false}
 					location="projects"
 				/>
 				<NavItem
@@ -107,29 +131,23 @@ const SideBar = () => {
 				/>
 			</Flex>
 
-			<Flex
-				p={"5%"}
-				flexDir="column"
-				w="100%"
-				alignItems={navSize == "small" ? "center" : "flex-start"}
-				mb={4}
-			></Flex>
-
-			<Divider display={navSize == "small" ? "none" : "200px"} />
-
-			<Flex mt={4} align="center">
-				<Link href={"/"}>
-					<Avatar size="sm" src="personal_photo.png" ml={2} mb={2} />
-				</Link>
-				<Flex
-					direction={"column"}
-					ml={4}
-					display={navSize == "small" ? "none" : "flex"}
-				>
-					<Heading as="h3" size={"sm"}>
-						Randy Nguyen
-					</Heading>
-					<Text>Technical Consultant II</Text>
+			<Flex flexDir={"column"}>
+				<Divider display={navSize == "small" ? "none" : "200px"} mb={5} />
+				<Flex align="center">
+					<Link href={"/"}>
+						<Avatar size="sm" src="personal_photo.png" ml={2} mb={2} />
+					</Link>
+					<Flex
+						direction={"column"}
+						ml={4}
+						mb={4}
+						display={navSize == "small" ? "none" : "flex"}
+					>
+						<Heading as="h3" size={"sm"} color={navTextColor}>
+							Randy Nguyen
+						</Heading>
+						<Text color={navTextColor}>Technical Consultant II</Text>
+					</Flex>
 				</Flex>
 			</Flex>
 		</Flex>
