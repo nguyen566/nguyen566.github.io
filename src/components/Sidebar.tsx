@@ -14,7 +14,7 @@ import { MdOutlineSchool, MdOutlineDescription } from "react-icons/md";
 import { SiAboutdotme } from "react-icons/si";
 import { GiSkills } from "react-icons/gi";
 import NavItem from "./Navitem";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 
 const SideBar = () => {
@@ -46,9 +46,10 @@ const SideBar = () => {
 
 	return (
 		<Flex
-			left="0"
+			left={0}
 			position="sticky"
 			top={0}
+			bottom={0}
 			h="100vh"
 			boxShadow={"0px 0px 2px black"}
 			w={navSize == "small" ? "75px" : "200px"}
@@ -77,7 +78,7 @@ const SideBar = () => {
 					bgColor={themeBgColor}
 				/>
 				<IconButton
-					aria-label="Icon Button"
+					aria-label="Menu Button"
 					background={"none"}
 					mt={5}
 					_hover={{ background: "none" }}
@@ -96,37 +97,39 @@ const SideBar = () => {
 					navSize={navSize}
 					icon={SiAboutdotme}
 					title="About"
-					active={scrollY < 500 ? true : false}
+					active={scrollY < 714.4000244140625 ? true : false}
 					location="aboutme"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineDescription}
 					title="Experience"
-					active={scrollY >= 500 && scrollY < 2046.4000244140625 ? true : false}
+					active={scrollY >= 714.4000244140625 && scrollY < 2080 ? true : false}
 					location="experience"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineSchool}
 					title="Education"
-					active={
-						scrollY >= 2046.4000244140625 && scrollY < 2480 ? true : false
-					}
+					active={scrollY >= 2080 && scrollY < 2612 ? true : false}
 					location="education"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={FiStar}
 					title="Projects"
-					active={scrollY >= 2480 && scrollY < 2880 ? true : false}
+					active={
+						scrollY >= 2612 && scrollY < 3156
+							? true
+							: false
+					}
 					location="projects"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={GiSkills}
 					title="Skills"
-					active={scrollY >= 2880 ? true : false}
+					active={scrollY >= 3156 ? true : false}
 					location="skills"
 				/>
 			</Flex>
@@ -134,7 +137,13 @@ const SideBar = () => {
 			<Flex flexDir={"column"}>
 				<Divider display={navSize == "small" ? "none" : "200px"} mb={5} />
 				<Flex align="center">
-					<Link href={"/"}>
+					<Link
+						to="aboutme"
+						activeClass="active"
+						spy={true}
+						smooth={true}
+						duration={500}
+					>
 						<Avatar size="sm" src="personal_photo.png" ml={2} mb={2} />
 					</Link>
 					<Flex
@@ -142,6 +151,7 @@ const SideBar = () => {
 						ml={4}
 						mb={4}
 						display={navSize == "small" ? "none" : "flex"}
+						mr={4}
 					>
 						<Heading as="h3" size={"sm"} color={navTextColor}>
 							Randy Nguyen

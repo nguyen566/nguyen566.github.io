@@ -1,11 +1,10 @@
-import { Heading, Flex, UnorderedList, ListItem, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import { skillData } from "../utils/skills";
 
 const Skill = () => {
 	return (
 		<>
-			<Heading size={"2xl"} mb={10}>
+			<Heading size={"2xl"} mt={5} mb={6}>
 				Skills
 			</Heading>
 			{skillData.map((skill) => {
@@ -14,7 +13,7 @@ const Skill = () => {
 						<Heading size={"md"} mb={3} as="i">
 							{skill.name}
 						</Heading>
-						<Flex justifyContent={"flex-start"} mb={3}>
+						<Flex justifyContent={"flex-start"} mb={3} flexDir={['column', 'column', 'row', 'row']}>
 							{skill.skills.map((skill) => {
 								return (
 									<Text key={skill.skillKey} mr={3}>

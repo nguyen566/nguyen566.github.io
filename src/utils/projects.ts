@@ -49,7 +49,7 @@ export const projectData = [
 				skillDesc: "Chakra",
 			},
 		],
-		github: "link",
+		github: "https://github.com/nguyen566/fullstack-graphql-reddit-clone",
 		deployed: undefined,
 		description: [
 			{
@@ -100,8 +100,8 @@ export const projectData = [
 				skillDesc: "Chakra",
 			},
 		],
-		github: "link",
-		deployed: undefined,
+		github: "https://github.com/nguyen566/nguyen566.github.io",
+		deployed: "https://randy-nguyen-portfolio.vercel.app/",
 		description: [
 			{
 				descKey: 1,
@@ -113,7 +113,7 @@ export const projectData = [
 			},
 			{
 				descKey: 3,
-				desc: "Published using Github",
+				desc: "Deployed using Vercel",
 			},
 		],
 	},
