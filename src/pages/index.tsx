@@ -14,10 +14,10 @@ const Home: NextPage = ({}) => {
 	const size = useWindowSize();
 
 	return (
-		<Flex flexDir={size.width > 980 ? "row" : "column"}>
+		<Flex flexDir={size.width > 980 ? "row" : "column"} >
 			{size.width > 980 ? <SideBar /> : <NavBar />}
-			<Flex bgColor={bgColor}>
-				<Flex flexDir={"column"} ml={"5"}>
+			<Flex bgColor={bgColor} w='100%'>
+				<Flex flexDir={"column"} ml={"5"} w='100%'>
 					<div id="aboutme" className="center-screen">
 						<About />
 					</div>

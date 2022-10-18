@@ -25,7 +25,7 @@ const NavBar = () => {
 		<Flex
 			position="sticky"
 			top={0}
-			w={['100%']}
+			w={'100%'}
 			h={14}
 			boxShadow={"0px 0px 2px black"}
 			flexDir="row"
