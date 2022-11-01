@@ -23,6 +23,10 @@ export const skillData = [
 				skillKey: 5,
 				desc: "SQL",
 			},
+			{
+				skillKey: 6,
+				desc: "C#",
+			},
 		],
 	},
 	{
@@ -44,6 +48,14 @@ export const skillData = [
 			{
 				skillKey: 4,
 				desc: "NodeJS",
+			},
+			{
+				skillKey: 5,
+				desc: ".NET",
+			},
+			{
+				skillKey: 6,
+				desc: "Angular",
 			},
 		],
 	},
