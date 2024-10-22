@@ -8,16 +8,17 @@ import Project from "../components/Project";
 import SideBar from "../components/Sidebar";
 import Skill from "../components/Skill";
 import useWindowSize from "../hooks/Windowsize";
+import useMaxWindowSize from "../hooks/MaxWindowSize";
 
 const Home: NextPage = ({}) => {
 	const bgColor = useColorModeValue("gray.100", "gray.800");
 	const size = useWindowSize();
 
 	return (
-		<Flex flexDir={size.width > 980 ? "row" : "column"} >
+		<Flex flexDir={size.width > 980 ? "row" : "column"}>
 			{size.width > 980 ? <SideBar /> : <NavBar />}
-			<Flex bgColor={bgColor} w='100%'>
-				<Flex flexDir={"column"} ml={"5"} w='100%'>
+			<Flex bgColor={bgColor} w="100%">
+				<Flex flexDir={"column"} ml={"5"} w="100%">
 					<div id="aboutme" className="center-screen">
 						<About />
 					</div>

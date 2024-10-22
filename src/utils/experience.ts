@@ -1,18 +1,51 @@
 export const experienceData = [
 	{
 		key: 1,
+		company: "KBX Technology",
+		location: "Green Bay, WI",
+		date: "November 2022 - Present",
+		title: "Software Engineer - Frontend Engineer",
+		description: [
+			{
+				descKey: 1,
+				desc: "Manage, maintain, and develop the teams SPA product by writing maintainable and durable code",
+			},
+			{
+				descKey: 2,
+				desc: "Refactoring 8 modules to enhance performance, readability, and reduce complexity by resolving es-lint errors, increasing code modularization and removing deprecated code ",
+			},
+			{
+				descKey: 3,
+				desc: "Develop over 5 features within the app using responsive design and lazy loading while factoring in cross-browser compatibility to ensure consistent user capabilities",
+			},
+			{
+				descKey: 4,
+				desc: "Write unit tests on new and existing code to meet business standards by achieving over 80% code coverage and improving build time by decreasing code testing time by 50%",
+			},
+			{
+				descKey: 5,
+				desc: "Design and structure code using NgRx Store standards to provide consistent and performant state management",
+			},
+			{
+				descKey: 6,
+				desc: "Smoke test APIs before integrating into application using Postman and ensure front-end models meet backend response and request to limit possible errors",
+			},
+		],
+	},
+	{
+		key: 2,
 		company: "Capgemini",
 		location: "Houston, TX",
-		date: "January 2022 - Present",
+		date: "January 2022 - November 2022",
 		title: "Technical Consultant II - Frontend Engineer",
 		description: [
 			{
 				descKey: 1,
-				desc: "Design and develop application to replace current Quality Issue Management system and implement new functionalities and features in-line with functional specifications and business requirements",
+				desc: "Designed and developed application to replace current Quality Issue Management system and implement new functionalities and features in-line with functional specifications and business requirements",
 			},
 			{
 				descKey: 2,
-				desc: "Demonstrate working knowledge of ABAP and Neptune by generating Rest APIs, classes, and methods",
+				desc: "Demonstrated working knowledge of ABAP and Neptune by generating Rest APIs, classes, and methods",
 			},
 			{
 				descKey: 3,
@@ -20,24 +53,24 @@ export const experienceData = [
 			},
 			{
 				descKey: 4,
-				desc: "Providing insight to team to determine if new request changes were possible and within scope of project",
+				desc: "Provided insight to team to determine if new request changes were possible and within scope of project",
 			},
 			{
 				descKey: 5,
-				desc: "Training two staff members, as lead Neptune developer, so that coding and naming conventions are within company standards",
+				desc: "Trained two staff members, as lead Neptune developer, so that coding and naming conventions are within company standards",
 			},
 			{
 				descKey: 6,
-				desc: "Complete all phases of planning, developing, and debugging applications accurately while meeting client needs and expectations",
+				desc: "Completed all phases of planning, developing, and debugging applications accurately while meeting client needs and expectations",
 			},
 			{
 				descKey: 7,
-				desc: "Document all defects recorded and assist in strategically planning out project timeline using Agile Scrum framework",
+				desc: "Documented all defects recorded and assisted in strategically planning out project timeline using Agile Scrum framework",
 			},
 		],
 	},
 	{
-		key: 2,
+		key: 3,
 		company: "Capgemini",
 		location: "Houston, TX",
 		date: "Novemeber 2020 - December 2021",
@@ -62,7 +95,7 @@ export const experienceData = [
 		],
 	},
 	{
-		key: 3,
+		key: 4,
 		company: "Hartman Income REIT",
 		location: "Houston, TX",
 		date: "August 2019 - October 2020",
@@ -83,7 +116,7 @@ export const experienceData = [
 		],
 	},
 	{
-		key: 4,
+		key: 5,
 		company: "Air Liquide",
 		location: "Houston, TX",
 		date: "June 2019 - August 2019",
@@ -104,7 +137,7 @@ export const experienceData = [
 		],
 	},
 	{
-		key: 5,
+		key: 6,
 		company: "University of Houston - IT Admissions",
 		location: "Houston, TX",
 		date: "September 2018 - May 2019",
@@ -125,7 +158,7 @@ export const experienceData = [
 		],
 	},
 	{
-		key: 6,
+		key: 7,
 		company: "Brighter Bites",
 		location: "Houston, TX",
 		date: "March 2018 - October 2018",
@@ -146,7 +179,7 @@ export const experienceData = [
 		],
 	},
 	{
-		key: 7,
+		key: 8,
 		company: "Pokeology",
 		location: "Houston, TX",
 		date: "January 2017 - May 2018",

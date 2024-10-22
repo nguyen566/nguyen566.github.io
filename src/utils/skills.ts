@@ -57,6 +57,18 @@ export const skillData = [
 				skillKey: 6,
 				desc: "Angular",
 			},
+			{
+				skillKey: 7,
+				desc: "Material Angular",
+			},
+			{
+				skillKey: 8,
+				desc: "Tailwind CSS",
+			},
+			{
+				skillKey: 9,
+				desc: "Jasmine",
+			},
 		],
 	},
 	{
@@ -83,7 +95,7 @@ export const skillData = [
 		skills: [
 			{
 				skillKey: 1,
-				desc: "Neptune DX SAP Edition",
+				desc: "NPM",
 			},
 			{
 				skillKey: 2,
@@ -108,6 +120,38 @@ export const skillData = [
 			{
 				skillKey: 7,
 				desc: "Git/Github",
+			},
+			{
+				skillKey: 8,
+				desc: "Postman",
+			},
+			{
+				skillKey: 9,
+				desc: "Azure DevOps",
+			},
+			{
+				skillKey: 10,
+				desc: "Storybook",
+			},
+			{
+				skillKey: 11,
+				desc: "Figma",
+			},
+			{
+				skillKey: 12,
+				desc: "API Integration",
+			},
+			{
+				skillKey: 13,
+				desc: "Responsive design",
+			},
+			{
+				skillKey: 14,
+				desc: "Back-end data flow",
+			},
+			{
+				skillKey: 15,
+				desc: "SonarQube",
 			},
 		],
 	},

@@ -16,10 +16,12 @@ import { GiSkills } from "react-icons/gi";
 import NavItem from "./Navitem";
 import { Link } from "react-scroll";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
+import useMaxWindowSize from "../hooks/MaxWindowSize";
 
 const SideBar = () => {
 	const [navSize, setNavSize] = useState("large");
 	const [scrollY, setScrollY] = useState(0);
+	const maxSize = useMaxWindowSize();
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	const navBgColor = useColorModeValue("blue.600", "gray.700");
@@ -104,14 +106,14 @@ const SideBar = () => {
 					navSize={navSize}
 					icon={MdOutlineDescription}
 					title="Experience"
-					active={scrollY >= 714.4000244140625 && scrollY < 2080 ? true : false}
+					active={scrollY >= 714.4000244140625 && scrollY < 2667 ? true : false}
 					location="experience"
 				/>
 				<NavItem
 					navSize={navSize}
 					icon={MdOutlineSchool}
 					title="Education"
-					active={scrollY >= 2080 && scrollY < 2612 ? true : false}
+					active={scrollY >= 2667 && scrollY < 3000 ? true : false}
 					location="education"
 				/>
 				<NavItem
@@ -119,7 +121,7 @@ const SideBar = () => {
 					icon={FiStar}
 					title="Projects"
 					active={
-						scrollY >= 2612 && scrollY < 3156
+						scrollY >= 3000 && scrollY < maxSize && scrollY !== maxSize
 							? true
 							: false
 					}
@@ -129,7 +131,7 @@ const SideBar = () => {
 					navSize={navSize}
 					icon={GiSkills}
 					title="Skills"
-					active={scrollY >= 3156 ? true : false}
+					active={scrollY === maxSize && scrollY !== 0 ? true : false}
 					location="skills"
 				/>
 			</Flex>
@@ -156,7 +158,7 @@ const SideBar = () => {
 						<Heading as="h3" size={"sm"} color={navTextColor}>
 							Randy Nguyen
 						</Heading>
-						<Text color={navTextColor}>Technical Consultant II</Text>
+						<Text color={navTextColor}>Software Engineer</Text>
 					</Flex>
 				</Flex>
 			</Flex>

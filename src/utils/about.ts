@@ -1,7 +1,7 @@
 export const about = [
     {
         "name": "Randy Nguyen",
-        "title": "Technical Consultant II",
+        "title": "Software Engineer - Frontend Engineer",
         "address": "Houston, TX",
         "email": "randy.nguyen@live.com",
         "description": "I am an enthusiastic software developer that enjoys learning new skills and experimenting with them.",
