@@ -91,7 +91,7 @@ export const skillData = [
 	},
 	{
 		key: 4,
-        name: 'Technology',
+        name: 'Technologies',
 		skills: [
 			{
 				skillKey: 1,
