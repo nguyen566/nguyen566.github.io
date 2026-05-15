@@ -1,15 +1,11 @@
 export const skillData = [
 	{
 		key: 1,
-        name: 'Languages',
+		name: 'Languages',
 		skills: [
 			{
 				skillKey: 1,
-				desc: "JavaScript",
-			},
-			{
-				skillKey: 2,
-				desc: "ABAP",
+				desc: "Python",
 			},
 			{
 				skillKey: 3,
@@ -17,7 +13,7 @@ export const skillData = [
 			},
 			{
 				skillKey: 4,
-				desc: "JSON",
+				desc: "JavaScript",
 			},
 			{
 				skillKey: 5,
@@ -31,7 +27,7 @@ export const skillData = [
 	},
 	{
 		key: 2,
-        name: 'Frameworks',
+		name: 'Frameworks',
 		skills: [
 			{
 				skillKey: 1,
@@ -67,17 +63,21 @@ export const skillData = [
 			},
 			{
 				skillKey: 9,
-				desc: "Jasmine",
+				desc: "JasmineJS",
+			},
+			{
+				skillKey: 10,
+				desc: "FastAPI",
 			},
 		],
 	},
 	{
 		key: 3,
-        name: 'Databases',
+		name: 'Databases',
 		skills: [
 			{
 				skillKey: 1,
-				desc: "MongoDB",
+				desc: "SQLite",
 			},
 			{
 				skillKey: 2,
@@ -91,15 +91,15 @@ export const skillData = [
 	},
 	{
 		key: 4,
-        name: 'Technologies',
+		name: 'Technologies',
 		skills: [
 			{
 				skillKey: 1,
-				desc: "NPM",
+				desc: "Node Version Manager (NVM)",
 			},
 			{
 				skillKey: 2,
-				desc: "Neptune DXP Open Edition",
+				desc: "Docker",
 			},
 			{
 				skillKey: 3,
@@ -153,6 +153,10 @@ export const skillData = [
 				skillKey: 15,
 				desc: "SonarQube",
 			},
+			{
+				skillKey: 16,
+				desc: "AI Integration",
+			}
 		],
 	},
 ];

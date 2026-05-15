@@ -1,34 +1,34 @@
 export const experienceData = [
 	{
 		key: 1,
-		company: "KBX Technology",
+		company: "KBX Logistics",
 		location: "Green Bay, WI",
-		date: "November 2022 - Present",
-		title: "Software Engineer - Frontend Engineer",
+		date: "November 2022 - May 2026",
+		title: "Software Engineer",
 		description: [
 			{
 				descKey: 1,
-				desc: "Manage, maintain, and develop the teams SPA product by writing maintainable and durable code",
+				desc: "Led architecture, development, and maintenance of three Angular SPAs, refactoring legacy components into modular, maintainable design while driving cross-team adoption of coding standards, ESLint rules, and best practices.",
 			},
 			{
 				descKey: 2,
-				desc: "Refactoring 8 modules to enhance performance, readability, and reduce complexity by resolving es-lint errors, increasing code modularization and removing deprecated code ",
+				desc: "Improved application performance, readability, and scalability by reducing code complexity, eliminating deprecated patterns, implementing lazy loading, and increasing code modularization and reusability across features.",
 			},
 			{
 				descKey: 3,
-				desc: "Develop over 5 features within the app using responsive design and lazy loading while factoring in cross-browser compatibility to ensure consistent user capabilities",
+				desc: "Designed and implemented NgRx Signal Store state management patterns and developed 10+ responsive, cross-browser compatible features to ensure consistent, high-performance user experiences.",
 			},
 			{
 				descKey: 4,
-				desc: "Write unit tests on new and existing code to meet business standards by achieving over 80% code coverage and improving build time by decreasing code testing time by 50%",
+				desc: "Increased unit test coverage to 80%+ by redesigning test strategy and refactoring test suites, resulting in up to 90% faster test execution and significantly improved CI/CD pipeline efficiency.",
 			},
 			{
 				descKey: 5,
-				desc: "Design and structure code using NgRx Store standards to provide consistent and performant state management",
+				desc: "Designed and structured code according to NgRx Signal Store standards to enable consistent and high-performance state management",
 			},
 			{
 				descKey: 6,
-				desc: "Smoke test APIs before integrating into application using Postman and ensure front-end models meet backend response and request to limit possible errors",
+				desc: "Owned UI/UX consistency through UI audits and design standardization while validating frontend models against backend API contracts and conducting API smoke testing with Postman to reduce integration defects.",
 			},
 		],
 	},
@@ -37,35 +37,23 @@ export const experienceData = [
 		company: "Capgemini",
 		location: "Houston, TX",
 		date: "January 2022 - November 2022",
-		title: "Technical Consultant II - Frontend Engineer",
+		title: "Technical Consultant II",
 		description: [
 			{
 				descKey: 1,
-				desc: "Designed and developed application to replace current Quality Issue Management system and implement new functionalities and features in-line with functional specifications and business requirements",
+				desc: "Designed and developed an application to replace the existing Quality Issue Management system, delivering new functionalities and features aligned with functional specifications and business requirements",
 			},
 			{
 				descKey: 2,
-				desc: "Demonstrated working knowledge of ABAP and Neptune by generating Rest APIs, classes, and methods",
+				desc: "Implemented enhancements in line with defined business requirements to improve system capability and support quality issue management processes",
 			},
 			{
 				descKey: 3,
-				desc: "Liaised with 6 offshore members, 4 ABAP developers, and 3 quality assurance testers to increase performance of application by reducing the time to process up to 500,000 materials by 70%",
+				desc: "Demonstrated working knowledge of ABAP and Neptune by generating REST APIs, classes, and methods to support application functionality and integration",
 			},
 			{
 				descKey: 4,
-				desc: "Provided insight to team to determine if new request changes were possible and within scope of project",
-			},
-			{
-				descKey: 5,
-				desc: "Trained two staff members, as lead Neptune developer, so that coding and naming conventions are within company standards",
-			},
-			{
-				descKey: 6,
-				desc: "Completed all phases of planning, developing, and debugging applications accurately while meeting client needs and expectations",
-			},
-			{
-				descKey: 7,
-				desc: "Documented all defects recorded and assisted in strategically planning out project timeline using Agile Scrum framework",
+				desc: "Liaised with 6 offshore members, 4 ABAP developers, and 3 quality assurance testers to coordinate development and testing activities across teams",
 			},
 		],
 	},
@@ -74,23 +62,23 @@ export const experienceData = [
 		company: "Capgemini",
 		location: "Houston, TX",
 		date: "Novemeber 2020 - December 2021",
-		title: "Technical Consultant I - ABAP Developer",
+		title: "Technical Consultant I",
 		description: [
 			{
 				descKey: 1,
-				desc: "Maintained quality standards in ABAP structure and syntax to improve performance",
+				desc: "Maintained quality standards in ABAP structure and syntax to improve system performance.",
 			},
 			{
 				descKey: 2,
-				desc: "Collaborated with functional team to identify, design, and implement technology enabled solutions to improve communications",
+				desc: "Collaborated with functional teams to identify, design, and implement technology-enabled solutions that improved communication processes.",
 			},
 			{
 				descKey: 3,
-				desc: "Improved communication within company by automating report generation and created workflows to email reports",
+				desc: "Improved internal communication by automating report generation and creating workflows to distribute reports via email.",
 			},
 			{
 				descKey: 4,
-				desc: "Assisted in developing data conversion and file transfer using Enterprise Application Interface methodologies to integrate business applications, data, process, and devices across SAP HANA",
+				desc: "Assisted in developing data conversion processes to support integration across business applications and data environments.",
 			},
 		],
 	},
