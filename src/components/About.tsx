@@ -41,7 +41,7 @@ const About = () => {
 					borderRadius={"50%"}
 					mr={6}
 					onClick={() => {
-						window.open(about[0].linkedin);
+						window.open(about[0].linkedin, "_blank", "noopener,noreferrer");
 					}}
 				/>
 				<IconButton
@@ -55,7 +55,7 @@ const About = () => {
 					}
 					borderRadius={"50%"}
 					onClick={() => {
-						window.open(about[0].github);
+						window.open(about[0].github, "_blank", "noopener,noreferrer");
 					}}
 				/>
 			</Flex>
