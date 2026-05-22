@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { about } from "../utils/about";
 import { SocialIcon } from "react-social-icons";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
 const About = () => {
@@ -32,31 +33,22 @@ const About = () => {
 					<a target={"_blank"}>View Resume as PDF</a>
 				</Link>
 			</Text>
-			<Flex flexDir={"row"} my={10} justifyContent="">
+			<Flex flexDir={"row"} my={10} justifyContent="start" gap="1rem">
 				<IconButton
+					as="a"
+					href={about[0].linkedin}
+					target="_blank"
+					rel="noopener noreferrer"
 					aria-label="LinkedIn"
-					icon={
-						<SocialIcon network="linkedin" style={{ height: 60, width: 60 }} />
-					}
-					borderRadius={"50%"}
-					mr={6}
-					onClick={() => {
-						window.open(about[0].linkedin, "_blank", "noopener,noreferrer");
-					}}
+					icon={<FaLinkedin size={40} />}
 				/>
 				<IconButton
+					as="a"
+					href={about[0].github}
+					target="_blank"
+					rel="noopener noreferrer"
 					aria-label="Github"
-					icon={
-						<SocialIcon
-							network="github"
-							style={{ height: 60, width: 60 }}
-							bgColor={btnGitColor}
-						/>
-					}
-					borderRadius={"50%"}
-					onClick={() => {
-						window.open(about[0].github, "_blank", "noopener,noreferrer");
-					}}
+					icon={<FaGithub size={40} />}
 				/>
 			</Flex>
 		</Flex>
