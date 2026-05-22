@@ -6,18 +6,11 @@ import {
 	ListItem,
 	Text,
 	UnorderedList,
-	useColorModeValue,
 } from "@chakra-ui/react";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SocialIcon } from "react-social-icons";
+import { FaGithub, FaExternalLinkAlt, } from "react-icons/fa";
 import { projectData } from "../utils/projects";
 
 const Project = () => {
-	const btnBgColor = useColorModeValue("gray", "white");
-	const btnColor = useColorModeValue("white", "black");
-	const btnGitColor = useColorModeValue("gray", "white");
-
 	return (
 		<>
 			<Heading size={"2xl"} mt={5} mb={6}>
@@ -47,39 +40,23 @@ const Project = () => {
 									return <ListItem key={desc.descKey}>{desc.desc}</ListItem>;
 								})}
 							</UnorderedList>
-							<Flex my={5} alignItems="center">
+							<Flex my={5} alignItems="center" gap="1rem">
 								<IconButton
-									aria-label="Github"
-									icon={
-										<SocialIcon
-											network="github"
-											style={{ height: 50, width: 50 }}
-											bgColor={btnGitColor}
-										/>
-									}
-									borderRadius={"50%"}
-									mr={5}
-									size="lg"
-									onClick={() => {
-										window.open(project.github);
-									}}
+									as="a"
+									href={project.github}
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Project github"
+									icon={<FaGithub size={30} />}
 								/>
 								{project.deployed !== undefined ? (
 									<IconButton
-										aria-label="External Weblink"
-										icon={
-											<FontAwesomeIcon
-												icon={faArrowUpRightFromSquare}
-												size="xl"
-												color={btnColor}
-											/>
-										}
-										bgColor={btnBgColor}
-										borderRadius={"50%"}
-										size="lg"
-										onClick={() => {
-											window.open(project.deployed);
-										}}
+										as="a"
+										href={project.deployed}
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label="Deployed project"
+										icon={<FaExternalLinkAlt size={30} />}
 									/>
 								) : null}
 							</Flex>

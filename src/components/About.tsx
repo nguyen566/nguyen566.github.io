@@ -7,7 +7,6 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { about } from "../utils/about";
-import { SocialIcon } from "react-social-icons";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import Link from "next/link";
 
