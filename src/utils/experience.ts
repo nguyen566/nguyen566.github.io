@@ -8,11 +8,11 @@ export const experienceData = [
 		description: [
 			{
 				descKey: 1,
-				desc: "Led architecture, development, and maintenance of three Angular SPAs, refactoring legacy components into modular, maintainable design while driving cross-team adoption of coding standards, ESLint rules, and best practices.",
+				desc: "•	Led architecture and development of three Angular projects while refactoring legacy components into modular, maintainable design.",
 			},
 			{
 				descKey: 2,
-				desc: "Improved application performance, readability, and scalability by reducing code complexity, eliminating deprecated patterns, implementing lazy loading, and increasing code modularization and reusability across features.",
+				desc: "•	Improved application performance by reducing code complexity, ensuring usage of OnPush change detection strategy coupled with Signals, implementing lazy loading, and reducing memory leaks.",
 			},
 			{
 				descKey: 3,
@@ -24,7 +24,7 @@ export const experienceData = [
 			},
 			{
 				descKey: 5,
-				desc: "Designed and structured code according to NgRx Signal Store standards to enable consistent and high-performance state management",
+				desc: "Leveraged GPT and Claude Sonnet AI models within Copilot to enhance developer productivity and streamline code optimization processes.",
 			},
 			{
 				descKey: 6,
