@@ -8,11 +8,11 @@ export const experienceData = [
 		description: [
 			{
 				descKey: 1,
-				desc: "•	Led architecture and development of three Angular projects while refactoring legacy components into modular, maintainable design.",
+				desc: "Led architecture and development of three Angular projects while refactoring legacy components into modular, maintainable design.",
 			},
 			{
 				descKey: 2,
-				desc: "•	Improved application performance by reducing code complexity, ensuring usage of OnPush change detection strategy coupled with Signals, implementing lazy loading, and reducing memory leaks.",
+				desc: "Improved application performance by reducing code complexity, ensuring usage of OnPush change detection strategy coupled with Signals, implementing lazy loading, and reducing memory leaks.",
 			},
 			{
 				descKey: 3,
