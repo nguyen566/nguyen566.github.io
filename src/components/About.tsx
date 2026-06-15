@@ -27,11 +27,11 @@ const About = () => {
 			<Text fontSize="lg" mb={10}>
 				{about[0].description}
 			</Text>
-			<Text fontSize="lg" mb={10} color="blue">
+			{/* <Text fontSize="lg" mb={10} color="blue">
 				<Link href={"Randy_Nguyen_Resume.pdf"}>
 					<a target={"_blank"}>View Resume as PDF</a>
 				</Link>
-			</Text>
+			</Text> */}
 			<Flex flexDir={"row"} my={10} justifyContent="start" gap="1rem">
 				<IconButton
 					as="a"
