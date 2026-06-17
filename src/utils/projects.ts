@@ -1,6 +1,61 @@
 export const projectData = [
   {
     key: 1,
+    name: "Local LLM Assistant",
+    type: "AI Integration",
+    skills: [
+      {
+        skillKey: 1,
+        skillDesc: "Ollama",
+      },
+      {
+        skillKey: 2,
+        skillDesc: "llama.cpp",
+      },
+      {
+        skillKey: 3,
+        skillDesc: "Web OpenAI UI",
+      },
+      {
+        skillKey: 4,
+        skillDesc: "Obsidian",
+      },
+      {
+        skillKey: 5,
+        skillDesc: "GitHub Copilot",
+      },
+      {
+        skillKey: 6,
+        skillDesc: "Web Browsing/Scraping",
+      },
+      {
+        skillKey: 7,
+        skillDesc: "Qwen 3.6",
+      },
+      {
+        skillKey: 8,
+        skillDesc: "Docker",
+      },
+    ],
+    github: undefined,
+    deployed: undefined,
+    description: [
+      {
+        descKey: 1,
+        desc: "Built a RAG Application using llama.cpp and supported initialization with a batch file",
+      },
+      {
+        descKey: 2,
+        desc: "Integrated OpenAI-compatible LLM APIs and incorporated into Visual Studio Code to assist coding",
+      },
+      {
+        descKey: 3,
+        desc: "Connected with Open WebUI and Obsidian vault to store data for retrieval",
+      },
+    ],
+  },
+  {
+    key: 2,
     name: "Job Tracker Dashboard",
     type: "Fullstack Development",
     skills: [
