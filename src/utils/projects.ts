@@ -134,7 +134,7 @@ export const projectData = [
     ],
   },
   {
-    key: 2,
+    key: 3,
     name: "Reddit Clone Site",
     type: "Fullstack Development",
     skills: [
@@ -209,7 +209,7 @@ export const projectData = [
     ],
   },
   {
-    key: 3,
+    key: 4,
     name: "Personal Portfolio",
     type: "Frontend Development",
     skills: [
